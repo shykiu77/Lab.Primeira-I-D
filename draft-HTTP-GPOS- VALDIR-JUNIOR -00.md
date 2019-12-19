@@ -1,4 +1,4 @@
-**Working Group Name**  **Initial. Lastname**
+**Working Group Name**  **Valdir. Junior**
   
 Internet Draft         DComp/UFS
 
@@ -8,7 +8,7 @@ Expires: Fail 0000
 
 
 
-# Title draft-GRUPO-DE-TRABALHO-NOME-ALUNO-00.txt
+# Title draft-GRUPO-DE-TRABALHO-VALDIR-JUNIOR-00.txt
 
 
 ## Status of this Memo
@@ -45,7 +45,9 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+> Este protocolo é uma variação do HTTP para fins de permitir a requisição de geolocalização de um determinado site.
+
+Esta mudança no protocolo pretende implementar no HTTP o serviço de GPOS - Geographic Location, que consta na RFC 1712 e serve para obter a localização geográfica entre o cliente e o servidor através do DNS, retornando o posicionamento através da sua latitude, longitude e altitude. 
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,8 +58,20 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
 
+A aplicação do **cliente** deverá realizar uma requisição para o servidor desejado com o cabeçalho incluindo o campo *GPOS* no seguinte formato: 
+
+```<metodo> <nome do arquivo + extensao> versao HTTP HOST: <endereco do host> GPOS: <nome do dispositivo>```
+  
+Como por exemplo:
+
+```GET <index.html> HTTP/1.1 HOST: <www.ufs.br> GPOS: <gps>```
+
+A partir disso, caso a requisição seja aceita com sucesso pelo **servidor**, o mesmo deverá retornar através do serviço de DNS o seu posicionamento contendo as suas coordenadas geográficas: latitude, longitude e altitude, no seguinte formato:
+
+```<nome do dispositivo> <ttl> <class> GPOS <longitude> <latitude> <altitude>```
+
+Importante ressalter que os campos *"nome do dispositivo", "ttl" e "class"* são **opcionais**.
 
 ## 4. Security Considerations
 
