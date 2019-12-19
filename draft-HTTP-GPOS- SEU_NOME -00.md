@@ -56,7 +56,7 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Para o cliente enviar um requisição ele deve usar o método GET padrão,apenas adicionando um novo campo GPOS (GPOS:nome-dispositivo)
+Para o cliente enviar um requisição ele deve usar o método GET padrão,apenas adicionando um novo campo GPOS (GPOS:nome-dispositivo)
 
 No caso do servidor, ele retornará as informações de geolocalização da maneira abaixo:
 
