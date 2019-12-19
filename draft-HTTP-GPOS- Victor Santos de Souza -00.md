@@ -45,7 +45,7 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Este extensão do protocolo HTTP servirá para informar a geolocalização do site requisitado.
+Este extensão do protocolo HTTP servirá para informar a geolocalização do site requisitado.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,7 +56,7 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->No lado do cliente o mesmo fará a requisição HTTP adicionando o novo campo GPOS:nome_dispositivo, como segue o exemplo a seguir:
+No lado do cliente o mesmo fará a requisição HTTP adicionando o novo campo GPOS:nome_dispositivo, como segue o exemplo a seguir:
 GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr
