@@ -56,7 +56,7 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Uma requisição feita a partir do cliente em direção ao servidor desejado deve possuir o determinado formato:
+Uma requisição feita a partir do cliente em direção ao servidor desejado deve possuir o determinado formato:
 <metodo> <arquivo desejado + extensão> <versão do HTTP>
 HOST: <url do host>
 GPOS: <nome do dispositivo>
@@ -69,7 +69,7 @@ GPOS: gps
 
 O servidor, por sua vez, deve retornar uma resposta no seguinte formato:
 
-<nome_dispositivo> <ttl> <class> GPOS <longitude> <latitude> <altitude>
+<nome_dispositivo> <ttl> <class> <GPOS> <longitude> <latitude> <altitude>
 
 ## 4. Security Considerations
 
