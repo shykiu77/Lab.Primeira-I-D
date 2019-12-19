@@ -57,14 +57,19 @@ In this document, the characters ">>" preceding an indented line(s)   indicates 
 
 ## 3. Section 2 heading as appropriate
 Uma requisição feita a partir do cliente em direção ao servidor desejado deve possuir o determinado formato:
+
 <metodo> <arquivo desejado + extensão> <versão do HTTP>
+
 HOST: <url do host>
+
 GPOS: <nome do dispositivo>
 
 A exemplo:
 
 GET index.html HTTP/1.1
+
 HOST: www.ufs.br
+
 GPOS: gps
 
 O servidor, por sua vez, deve retornar uma resposta no seguinte formato:
