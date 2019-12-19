@@ -45,7 +45,7 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+> O protocolo serve para realizar uma requisição de geolocalização de um site a partir de um cliente.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,7 +56,10 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+> 1 - o cliente irá solicitar a geolocalização do site utilizando de um campo
+     GPOS: nome_dipositivo_solicitante
+> 2 - o servidor deve retornar para o cliente a seguinte mensagem:
+     nome_dispositivo_solicitante ttl class **GPOS** longitude latitude altitude
 
 
 ## 4. Security Considerations
