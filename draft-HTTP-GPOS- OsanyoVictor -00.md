@@ -1,6 +1,6 @@
 **Working Group Name**  **Initial. Lastname**
   
-Internet Draft         DComp/UFS
+Internet Draft          DComp/UFS
 
 Intended status: EXPERIMENTAL         XXX 0, 0000
 
@@ -45,7 +45,7 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+Atualmente, muitos aplicativos tem usado o posicionamento geográfico como informacão mais importante do seu modelo de negócio, como uber, ifood, pokemon GO etc. A ideia é usar o serviço de identificação do GPOS é implementado nan RFC1712 no protocolo HTTP ao invés do DNS, para capturar o posicionamento geográfico.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,8 +56,9 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+Uma requisição GET HTTP com um campo chamado GPOS: nome_dispositivo
 
+O Servidor deve retornar uma resposta no formato: nome_dispositivo ttl class GPOS longitude latitude altitude.
 
 ## 4. Security Considerations
 
@@ -83,6 +84,8 @@ Demon Internet Ltd., November 1997.
 
 [RFC2234]	Crocker, D. and Overell, P.(Editors), "Augmented BNF for Syntax Specifications: ABNF", RFC 2234, Internet Mail 
 Consortium and Demon Internet Ltd., November 1997.
+
+[RFC1712] C. Farrell, M. Schulze, S. Pleitner, D. Baldoni, "DNS Encoding of Geographical Location", RFC 2234, NOVEMBER 1994
 
 ### 7.2. Informative References
 
