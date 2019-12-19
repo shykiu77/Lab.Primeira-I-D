@@ -45,7 +45,7 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+> O serviço servirá para capturar a geolocalizaçãom, altitude, longitude, latitude, do site em questão, útil para caputarmos possíveis problemas de conexão ou algo do gênero.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,8 +56,19 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+> O protocolo se trata de uma extensão do protocolo HTTP padrão, utilizando de todos os seus campos padrão e mais 2 adicionais, o campos GPOS. O campo rGPOS possui o nome do dispostivo, que indica o dispositivo que está solicitando a informação, estará presente na mensagem de requisição, e o campo GPOS será o campo pelo qual os dados serão enviados, que estará na mensagem de resposta. Dessa forma, a mensagem de requisição ficará, por exemplo, assim:
 
+GET / HTTP/1.5
+Host: localhost:8000
+User-Agent: ...
+rGPOS: meuDispositivo
+
+HTTP/1.5
+Server: Apache
+.
+.
+.
+GPOS: meuDispositivo ttl class GPOS latitude longitude altitude
 
 ## 4. Security Considerations
 
