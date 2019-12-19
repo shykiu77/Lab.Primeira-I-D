@@ -57,10 +57,10 @@ In this document, the characters ">>" preceding an indented line(s)   indicates 
 
 ## 3. Section 2 heading as appropriate
 No lado do cliente o mesmo fará a requisição HTTP adicionando o novo campo GPOS:nome_dispositivo, como segue o exemplo a seguir:
-GET / HTTP/1.1
-Host: developer.mozilla.org
-Accept-Language: fr
-GPOS:servidor_3
+GET / HTTP/1.1.
+Host: developer.mozilla.org.
+Accept-Language: fr.
+GPOS:servidor_3.
 
 No lado do servidor ele retornará uma resposta HTTP acrescentando a seguinte linha:
 nome_dispositivo ttl class GPOS longitude latitude altitude
