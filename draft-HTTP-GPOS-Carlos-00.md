@@ -1,4 +1,4 @@
-**Working Group Name**  **Initial. Lastname**
+**Working Group Name**  **Carlos.Melo**
   
 Internet Draft         DComp/UFS
 
@@ -41,11 +41,11 @@ This document is subject to BCP 78 and the IETF Trust’s Legal Provisions Relat
 review these documents carefully, as they describe your rights and restrictions with respect to this document. 	
 
 ## Abstract
-> Type your abstract here. Typically 5-10 lines, never less than 3 lines nor more than 20 lines 
+This protocol provides a way to request the global position of a site through http.
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+Este protocolo tem a função de apenas enviar o posicionamento local de um determinado site através de mensagens http. O cliente começa mandando uma requisição para o servidor num determinado formato descrito na seção 3 e o servidor responde da mesma maneira.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,19 +56,37 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+O protocolo funciona da seguinte maneira: o cliente envia uma mensagem para o servidor com este formato:
+GET / HTTP/1.1
+Host: developer.mozilla.org
+Accept-Language: Br
+GPOS: developer.mozilla.org
 
+com o campo de dados vazio e o servidor responde com:
+
+HTTP/1.1 200 OK
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 67
+Content-Type: text/html 
+
+developer.mozilla.org ttl class GPOS N40° 44.9064', W073° 59.0735'
+
+<!DOCTYPE html... developer.mozilla.org ttl class GPOS N40° 44.9064', W073° 59.0735'>
 
 ## 4. Security Considerations
+Este protocolo é totalmente seguro.
 
->Add any security considerations
 
 ## 5. IANA Considerations
 
->Add any IANA considerations
+
 
 ## 6. Conclusions
-> Add any conclusions
+Este protocolo é bastante útil em situações em que queremos descobrir onde determinado site se localiza.
 
 ## 7. References
 
@@ -92,4 +110,3 @@ pp. 1573-1583.
 
 ## 8. Acknowledgments
 >Add any acknowledgements
-
